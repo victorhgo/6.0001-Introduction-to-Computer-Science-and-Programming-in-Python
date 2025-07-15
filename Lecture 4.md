@@ -1,5 +1,7 @@
 # Lecture 4 - Decomposition, Abstraction and Functions
 
+- [X] Reading of Chapters 4.1–4.2 and 4.4–4.6
+
 How to structure our programs? We can use functions to organize the code better, hiding details and making it easier to debug, which will be a mechanism to achieve _decomposition_ and _abstraction_. To implement a basic function that checks if a number is even or not:
 
 ```py
@@ -56,3 +58,65 @@ If you don't specify a return for the function, Python will returns _None_ as de
 Done, check /Lectures Codes/Lecture 4/exercise1.py
 
 ### Modules
+
+We can store parts of a program in different files for convenience and making it easy to organize and maintain. A *module* is a _.py_ file that contains Python definitions and statements, example is the _circle.py_:
+
+```py
+#circle.py
+
+pi = 3.14159
+
+def area(radius):
+    return pi*(radius**2)
+
+def circumference(radius):
+    return 2*pi*radius
+
+def sphereSurface(radius)
+    return 4.0*area(radius)
+
+def sphereVolume(radius)
+    return (4.0/3.0)*pi*(radius**3)
+```
+
+We simply import the _circle.py_ whenever we want to access it's definitions and statements: 
+
+```py
+import circle
+```
+
+> Note: circle.py is only accessible this way if the program calling it is in the same directory, otherwise we need to specify the path to it
+
+Modules usually are stored into individual files and each one has its own private symbol table
+
+When we execute the statement _from MODULE import *_ we can omit the module name when accessing names defined inside the imported module.
+
+A module can contain function definitions and also executable statements, usually to initialize the module.
+
+### Files
+
+Python has some built in facilities when dealing with files, they're called *file handle*. The following code is an example of opening a file named _log.txt_ in write mode, then you can enter a date and then closes the file:
+
+```py
+dateHandle = open('log.txt','w')
+for i in range(2):
+    date = input("Enter date: ")
+    dateHandle.write(date + '\n')
+
+dateHandle.close()
+```
+
+The _\n_ indicates a new line character (same way as in C language).
+
+To read the data inside _log.txt_, we can use the function _open()_ in read mode. Note that Python treats a file as a sequence of lines:
+
+```py
+dateHandle = open('log.txt','r')
+
+for line in dateHandle:
+    print(line)
+
+dateHandle.close()
+```
+
+

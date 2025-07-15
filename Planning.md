@@ -18,8 +18,8 @@ Started on: 12 July - 2025
 
 ## Problem Sets
 - [X] Pset 0 - Completed on 12 July 2025
-- [ ] Pset 1 - Working on it...
-- [ ] Pset 2
+- [X] Pset 1 - Completed on 15 July 2025
+- [ ] Pset 2 - 
 - [ ] Pset 3
 - [ ] Pset 4
 - [ ] Pset 5

@@ -1,23 +1,20 @@
 # Part 1 - Inputs
 annual_salary = float(input("Enter the starting salary: "))
 
-# Part 2 - Processing
+# Part 2 - Variables
 portion_down_payment = 250000 # 0.25 * total_cost ($1m)
-epsilon = 100 # 100$
-
-low = 0.0
-high = max(0.000,0.999)
-
-answer = (high + low) / 2.0
-
 current_savings = 0
 steps = 0
+epsilon = 100 # 100$
+low = 0.0
+high = max(0.000,0.9999)
+answer = (high + low) / 2.0
 
-# Functions
-def testRate(annual_salary, rate):
+# Calculate the annual return based on rate
+def calcRate(annual_salary, rate):
     """
-    Input: Annual salary and the savings rate
-    Returns total amount based on the entered rate
+    Input: Annual salary and savings rate as floats
+    Returns total amount based on the entered rate as float
     """
     current_savings = 0
     i = 0
@@ -32,20 +29,23 @@ def testRate(annual_salary, rate):
     
     return current_savings
 
-# 3 - Implement Bisection Method
+# If the income is too low, it won't be possible to pay in 36 months:
+if calcRate(annual_salary, 1.0) < portion_down_payment:
+    print("It is not possible to pay the down payment in three years.")
+    exit()
 
-while abs(round(current_savings,1) / portion_down_payment) <= epsilon:
+# Bisection search for the best saving rate
+while abs(current_savings - portion_down_payment) > epsilon: 
 
-    current_savings = testRate(annual_salary, answer)
+    current_savings = round((calcRate(annual_salary, answer)), 2)
 
     if current_savings > portion_down_payment:
         high = answer
     else:
         low = answer
+
     steps += 1
-    answer = (high + low) / 2.0
-
-    print("Current savings: ", current_savings, "Answer: ", answer, "Steps: ", steps)
-
-    
-print("answer = ", answer, "current savings = ", current_savings)
+    answer = round(((high + low) / 2.0), 4)
+                         
+print("Best saving rate:", answer)
+print("Steps in bisection search:", steps)
