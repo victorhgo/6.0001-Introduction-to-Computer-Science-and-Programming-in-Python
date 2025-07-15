@@ -101,6 +101,8 @@ else:
     print("Cube root of " + str(cube) + " is " + str(guess))
 ```
 
+!!! S Note that _Exhaustive enumeration_ only works if the set of values being searched includes the value.
+
 _abs() function returns the absolute value of the given number. If the number is a complex number, abs() returns its magnitude._
 
 > Approximate Solutions
@@ -143,11 +145,11 @@ It searches half interval each iteration, and new guesses will be halfway in bet
 - Game guessing a number
 
 1. search space
-    - first guess: N/2
-    - second guess: N/2
-    - k guess: N/2^k
+    - first guess: $N/2$
+    - second guess: $N/2$
+    - k guess: $N/2^k$
 
-2. guess converges on the order of log2N steps
+2. guess converges on the order of $\log_2(N)$ steps
 
 3. bisection search works when value of function varies monotonically with input (what does that mean?)
 
@@ -158,6 +160,8 @@ It searches half interval each iteration, and new guesses will be halfway in bet
 x < 1:
 if x < 1, search space is 0 to x but cube root is greater than x and less than 1
 
-modify the code to choose the search space depending on value of x
+> Exercise: Modify the code to work for finding an approximation to the cube root of both negative numbers and positive number.
+
+_Answer_: By changing the _low_ statement from $0.0$ to _min(1.0, x)_ (The min() function returns the item with the lowest value, or the item with the lowest value in an iterable) we ensure that the answer will lies within the region being searched. In case of a negative number x, lower will receive _lower = -x_.
 
 

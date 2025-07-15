@@ -1,3 +1,4 @@
+# Implementation: Finding the cube root of a number by Approximation
 cube = 10000
 epsilon = 0.01
 
