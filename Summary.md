@@ -6,7 +6,7 @@
 - [X] Lecture 3 - String Manipulation, Guess and Check, Approximations, Bisection 
 - [X] Lecture 4 - Decomposition, Abstractions, Functions 
 - [X] Lecture 5 - Tuples, Lists, Aliasing, Mutability, Cloning 
-- [ ] Lecture 6 - Recursion, Dictionaries 
+- [X] Lecture 6 - Recursion, Dictionaries 
 - [ ] Lecture 7 - Testing, Debugging, Exceptions, Assertions
 - [ ] Lecture 8 - Object Oriented Programming 
 - [ ] Lecture 9 - Python Classes and Inheritance 
@@ -21,8 +21,6 @@
 - [ ] Pset 3
 - [ ] Pset 4
 - [ ] Pset 5
-- [ ] Pset 6
-- [ ] Pset 7
 
 ## Readings and Assignments
 

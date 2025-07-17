@@ -160,7 +160,118 @@ In general, females(n) = females (n - 1) + females(n - 2)
 
 ### Recursion on non Numerics
 
-How to check if a string of characters is a palindrome? 29:18 video
+How to check if a string of characters is a palindrome? "A palindrome is a word, phrase, name, or number that reads the same forward or backward".
+
+First step to check if a string is a palindrome, we need to get rid of everything except characters (punctuation, spaces), convert everything to lower case then test it:
+
+- If the string has length 0 or 1, it is a palindrome (**Base Case**)
+- Recursive case: If first character matches last character, then is a palindrome if middle section is a palindrome
+
+> Example: "Able was I, ere I saw Elba" removing every punctuation and spaces -> it becomes -> "ablewasiereisawelba"
+
+```py
+def isPalindrome(string):
+    """
+    Receives an string, converts everything to chars and lower case using
+    toChars(string) function, which will return a list to isPal(string) that
+    verifies if string is a palindrome.
+
+    Return True if string is a palindrome, and False otherwise.
+    """
+    def toChars(string):
+        string = string.lower()
+        ans = ''
+        for ch in string:
+            if ch in 'abcdefghijklmnopqrstuvwxyz':
+                ans = ans + ch
+        return ans
+    
+    def isPal(string):
+        if len(string) <= 1:
+            return True
+        else:
+            return string[0] == string[-1] and isPal(string[1:-1])
+    
+    return isPal(toChars(string))
+
+# Output:
+napoleon = "Able was I, ere I saw Elba"
+print("Is,'", napoleon, "' a palindrome?", isPalindrome(napoleon))
+```
+Execution of the above code:
+
+```sh
+$ python3 palindrome.py
+Is,' Able was I, ere I saw Elba ' a palindrome? True
+```
+
+## Dictionaries
+
+A dictionary is good to index item of interest directly (not always an integer), and only requires one data structure. It stores pairs of data: a key and a value:
+
+| Key  | Value |
+| ---  | ---  |
+| key1 | val1 |
+| key2 | val2 |
+| key3 | val3 |
+| key4 | val4 |
+| ...  | ...  |
+
+To declare a dictionary:
+
+```py
+myDictionary = {} # Empty Dictionary
+grades = {'Ana':'B', 'John':'A+', 'Victor':'A'}
+```
+
+It's similar to indexing into a list, but instead of a index integer, it will looks up the **key** and returns the value associated with it. If key is not found, get an error:
+
+From the above example:
+
+```py
+grades['John'] # -> Returns 'A+'
+grades['Julian'] # -> gives a Key Error
+```
+
+Since dictionaries are mutable, we can add entries by simply giving a key and associating a value to it:
+
+```py
+grades['Julian'] = 'B'
+
+# It will now become:
+grades = {'Ana':'B', 'John':'A+', 'Victor':'A', 'Julian':'B'}
+```
+
+We can also test if a key is in dictionary:
+
+```py
+'Victor' in grades # -> Returns True
+'Danielle' in grades # -> Returns False
+```
+
+We can also remove an entry:
+
+```py
+del(grades['Ana'])
+```
+
+We can also get an iterable that acts like a tuple of all keys.
+
+```py
+grades = {'Ana':'B', 'John':'A+', 'Victor':'A', 'Julian':'B'}
+grades.keys() # -> returns ['Ana', 'John', 'Victor', 'Julian']
+```
+
+Or we can get an iterable collection of all values:
+
+```py
+grades = {'Ana':'B', 'John':'A+', 'Victor':'A', 'Julian':'B'}
+grades.values() # -> returns ['B', 'A+', 'A', 'B']
+```
+
+Note that the key must be **unique** and **immutable** for each dictionary.
+
+## Dictionary, Recursion and Memoization
 
 
 

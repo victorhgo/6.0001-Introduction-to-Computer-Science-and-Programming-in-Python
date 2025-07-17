@@ -10,3 +10,20 @@ def fib(x):
     
 
 print("Number of female rabbits after 12 months:", fib(12))
+
+# Fibonacci with a dictionary: (Comparing using memoization)
+# It will do a lookup first in case it already calculated the value and
+# modify dictionary as progress through function calls:
+
+print("Let's run the efficient one:")
+def fibEfficient(number, dictionary):
+    if number in dictionary:
+        return dictionary[number]
+    else:
+        answer = fibEfficient(number - 1, dictionary) + fibEfficient(number - 2, dictionary)
+        dictionary = answer
+        return answer
+
+dictionary = {1:1, 2:2}
+print(fibEfficient(6, dictionary))
+

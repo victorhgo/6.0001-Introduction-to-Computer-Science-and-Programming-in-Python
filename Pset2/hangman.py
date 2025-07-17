@@ -1,6 +1,6 @@
 # Problem Set 2, hangman.py
-# Name: 
-# Collaborators:
+# Name: Victor Correa
+# Collaborators: Victor Correa
 # Time spent:
 
 # Hangman Game
@@ -15,7 +15,7 @@ import string
 WORDLIST_FILENAME = "words.txt"
 
 
-def load_words():
+def loadWords():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
     
@@ -34,7 +34,7 @@ def load_words():
 
 
 
-def choose_word(wordlist):
+def chooseWord(wordlist):
     """
     wordlist (list): list of words (strings)
     
@@ -48,7 +48,7 @@ def choose_word(wordlist):
 
 # Load the list of words into the variable wordlist
 # so that it can be accessed from anywhere in the program
-wordlist = load_words()
+wordlist = loadWords()
 
 
 def is_word_guessed(secret_word, letters_guessed):
@@ -201,7 +201,7 @@ if __name__ == "__main__":
     # To test part 2, comment out the pass line above and
     # uncomment the following two lines.
     
-    secret_word = choose_word(wordlist)
+    secret_word = chooseWord(wordlist)
     hangman(secret_word)
 
 ###############
@@ -209,5 +209,5 @@ if __name__ == "__main__":
     # To test part 3 re-comment out the above lines and 
     # uncomment the following two lines. 
     
-    #secret_word = choose_word(wordlist)
+    #secret_word = chooseWord(wordlist)
     #hangman_with_hints(secret_word)
