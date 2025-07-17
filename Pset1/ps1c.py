@@ -10,6 +10,8 @@ low = 0.0
 high = max(0.000,0.9999)
 answer = (high + low) / 2.0
 
+# Part 3 - Processing
+
 # Calculate the annual return based on rate
 def calcRate(annual_salary, rate):
     """

@@ -1,13 +1,11 @@
 # 6.0001 - Introduction to Computer Science and Programming in Python
-Started on: 12 July - 2025
-> [6.0001 - Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/syllabus/)
 
 ## Lectures
 - [X] Lecture 1 - What is computation? 
 - [X] Lecture 2 - Branching and Iteration 
 - [X] Lecture 3 - String Manipulation, Guess and Check, Approximations, Bisection 
 - [X] Lecture 4 - Decomposition, Abstractions, Functions 
-- [ ] Lecture 5 - Tuples, Lists, Aliasing, Mutability, Cloning 
+- [X] Lecture 5 - Tuples, Lists, Aliasing, Mutability, Cloning 
 - [ ] Lecture 6 - Recursion, Dictionaries 
 - [ ] Lecture 7 - Testing, Debugging, Exceptions, Assertions
 - [ ] Lecture 8 - Object Oriented Programming 
