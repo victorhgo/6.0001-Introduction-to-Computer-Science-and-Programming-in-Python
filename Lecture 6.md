@@ -271,8 +271,21 @@ grades.values() # -> returns ['B', 'A+', 'A', 'B']
 
 Note that the key must be **unique** and **immutable** for each dictionary.
 
+| Some common operations on dictionaries includes: |
+| --- |
+| **len(dictionary)** returns the number of items in _dictionary_ |
+| **dictionary.keys()** return the keys on _dictionary_ |
+| **dictionary.values()** returns the values on _dictionary_ |
+| **key in dictionary** returns **True** if the key _key_ is in _dictionary_ |
+| **dictionary[key]** returns the item in _dictionary_ with key _key_ |
+| **dictionary.get(k, v)** returns dictionary[k] if k is in _dictionary_, and _v_ otherwise |
+| **dictionary[k] = v** associates a value _v_ to the key _k_. The value is replaced |
+| **del dictionary[k]** removes the key _k_ from _dictionary_ |
+| **for key in dictionary** iterates over the keys in _dictionary_ |
+
+
 ## Dictionary, Recursion and Memoization
 
-
+Write more here
 
 
