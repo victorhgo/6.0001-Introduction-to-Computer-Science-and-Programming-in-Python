@@ -7,9 +7,9 @@
 - [X] Lecture 4 - Decomposition, Abstractions, Functions 
 - [X] Lecture 5 - Tuples, Lists, Aliasing, Mutability, Cloning 
 - [X] Lecture 6 - Recursion, Dictionaries 
-- [ ] Lecture 7 - Testing, Debugging, Exceptions, Assertions
-- [ ] Lecture 8 - Object Oriented Programming 
-- [ ] Lecture 9 - Python Classes and Inheritance 
+- [X] Lecture 7 - Testing, Debugging, Exceptions, Assertions (Need to finish the Lecture Note)
+- [X] Lecture 8 - Object Oriented Programming 
+- [X] Lecture 9 - Python Classes and Inheritance 
 - [ ] Lecture 10 - Understanding Program Efficiency, Part 1 
 - [ ] Lecture 11 - Understanding Program Efficiency, Part 2 
 - [ ] Lecture 12 - Searching and Sorting
@@ -17,8 +17,8 @@
 ## Problem Sets
 - [X] Pset 0 - Completed on 12 July 2025
 - [X] Pset 1 - Completed on 15 July 2025
-- [ ] Pset 2 - 
-- [ ] Pset 3
+- [X] Pset 2 - Completed on 21 July 2025
+- [X] Pset 3 - Skipped on 23 July 2025
 - [ ] Pset 4
 - [ ] Pset 5
 
@@ -49,8 +49,8 @@ Textbook used in the lectures: _Introduction to Computation and Programming Usin
 - [X] - Chapters 4.1–4.2 and 4.4–4.6 - _Completed on July 16th_
 - [X] - Chapters 5.1–5.3.1 and 5.4–5.5 - _Completed on July 17th_
 - [X] - Chapters 4.3 and 5.6 - _Completed on July 21th_
-- [ ] - Chapters 6 and 7
-- [ ] - Chapter 8.1 and 8.2
+- [X] - Chapters 6 and 7 - _Completed on July 22th_
+- [X] - Chapter 8.1 and 8.2 - _Completed on July 23th_
 - [ ] - Chapters 9.1–9.3.1, 9.3.3, and 9.3.5
 - [ ] - Chapters 9.3.2, 9.3.4, 9.3.6, and 9.3.7
 - [ ] - Chapters 10.1–10.2
