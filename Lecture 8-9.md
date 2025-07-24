@@ -309,3 +309,93 @@ myAnimal = Animal(3) # myAnimal instance is initialized to self.age in class def
 ```
 
 #### Getter and Setter methods
+
+Getters and setters should be used outside of class to access data attributes
+
+```py
+class Animal(object):
+    def __init__(self, age): # Age initializes an Animal type
+        self.age = age 
+        self.name = None # name is a data attribute although an instance is not initialized with it as a parm
+    
+    def getAge(self): # Getter
+        """ Returns the age of object type Animal """
+        return self.age
+
+    def getName(self): # Getter
+        """ Returns the name of object type Anima """
+        return self.name
+
+    def setAge(self, newAge): # Setter
+        """ Sets an age for object type Animal """
+        self.age = newAge
+    
+    def setName(self, newName=""): # Setter
+        """ Sets a name for object type animal """
+        self.name = newName
+    
+    def __str__(self): 
+        """ Print method for object type Animal """
+        return "Animal:"+str(self.name)+":"+str(self.age)
+
+
+# Creating an animal cat: instantiation creates an instance of an object:
+
+cat = Animal(3)
+
+# cat.age # Access data attribute, not recommended. Returns self.age
+
+cat.getAge() # Best to user getters and setters for data attribute
+```
+
+We use getters and setters for **information hiding**, abstracting data attributes for users. Using getters and setters also make the code easier to maintain and help to prevent bugs.
+
+Python allow us to do certain things that we are not supposed to, like allowing us to access data from outside class definition, like in the example above: ```print(cat.age)```, writing data as ```cat.age = 'infinite'``` (breaking the rule that age has to be integers) or creating new attributes for an instance from outside class definition: ```cat.size = "tiny"```. It's not a good style doing any of these as they can lead to issues and bugs in the program.
+
+**Default Arguments** - Default arguments for formal parameters are used if no actual argument is given, for instance in the example:
+
+```py
+def setName(self, newName= ""):
+    self.name = newName
+```
+
+The default argument is used in the example: ```newName = ""```
+
+```py
+cat = Animal(3)
+cat.setName() # Will set it to "" 
+print(cat.getName())
+
+# Argument passing:
+
+cat2 = Animal(2)
+cat2.setName("Hugo") # Will set it to Hugo, overwriting ""
+print(cat2.getName())
+```
+
+### Inheritance
+
+**Hierarchy - Parent Classes and Child Class**
+
+We call the **Parent class(superclass)** the foundation for other classes, where we define common attributes and methods that can be inherited by its subclasses (called **child classes**). In the above example, Animal serves as a parent class while we can define subclasses for it like a _Cat_ subclass, or a _Person_ subclass. Child classes can have subclasses too.
+
+A **Child class** inherits all data and behaviours of parent class, but we can add more information, behaviour or even **override** behaviour. Example:
+
+```py
+class Animal(object):
+    # As we defined above
+
+class Cat(Animal): # Will inherits all attributes of Animal defined before
+    def speak(self): # Add new functionality (new method)
+        print("Meow")
+
+    def __str__(self): # Overrides __str__ from Animal
+        return "cat:"+str(self.name)+":"+str(self.age)
+```
+
+Instance of type _Cat_ can be called with new methods while instance of type _Animal_ will thrown an error if called with _Cat_ new method. In this case, ```__init__``` is not missing but it's using from _Animal_ parent class.
+
+Subclasses can have methods with same name as superclass as it will be override.
+
+Object Oriented Programming is great because it allow us to create our own collections of data, helps us organize information and also with work division, it helps accessing information in a consistent manner adding layers of complexity. Like functions, classes are mechanism for decomposition and abstraction in programming.
+
