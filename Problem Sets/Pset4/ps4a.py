@@ -19,22 +19,33 @@ def get_permutations(sequence):
     >>> get_permutations('abc')
     ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 
+    >>> get_permutations('ab')
+    ['ab', 'ba']
+
     Note: depending on your implementation, you may return the permutations in
     a different order than what is listed here.
     '''
+    permuts = []
+    if len(sequence) == 1: # Base case
+        permuts.append(sequence)
+    else:
+        i = 0
+        for e in sequence:
+            permuts.append(sequence[i + 1])
+            i += 1
+ 
+    return permuts
 
-    pass #delete this line and replace with your code here
 
 if __name__ == '__main__':
 #    #EXAMPLE
-#    example_input = 'abc'
-#    print('Input:', example_input)
-#    print('Expected Output:', ['abc', 'acb', 'bac', 'bca', 'cab', 'cba'])
-#    print('Actual Output:', get_permutations(example_input))
+    example_input = 'a'
+    print('Input:', example_input)
+    print('Expected Output:', ['abc', 'acb', 'bac', 'bca', 'cab', 'cba'])
+    print('Actual Output:', get_permutations(example_input))
     
 #    # Put three example test cases here (for your sanity, limit your inputs
 #    to be three characters or fewer as you will have n! permutations for a 
 #    sequence of length n)
 
-    pass #delete this line and replace with your code here
 
