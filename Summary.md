@@ -41,7 +41,7 @@ Textbook used in the lectures: _Introduction to Computation and Programming Usin
 | 11  | Understanding Program Efficiency, Part 2 | Chapters 9.3.2, 9.3.4, 9.3.6, and 9.3.7 | N/A |
 | 12  | Searching and Sorting algorithms | Chapters 10.1–10.2 | Pset 5 due |
 
-### Readings
+**Readings**
 
 - [X] - Chapter 1 and 2.1 - _Completed on July 12th_
 - [X] - Chapter 2.2, 2.3.1, 2.4 and 3.2 - _Completed on July 13th_

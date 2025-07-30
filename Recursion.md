@@ -10,9 +10,9 @@
 
 - [X] Exercise 4 - Write a recursive function `power(base, exponent)` to compute `base^exponent`.
 
-- [ ] Exercise 5 - Write a recursive function `print_reverse(n)` that prints numbers from `n` to `1`.
+- [X] Exercise 5 - Write a recursive function `print_reverse(n)` that prints numbers from `n` to `1`.
 
-- [ ] Exercise 6 - Write a recursive function `is_palindrome(s)` that checks if a string `s` is a palindrome.
+- [X] Exercise 6 - Write a recursive function `is_palindrome(s)` that checks if a string `s` is a palindrome.
 
 - [ ] Exercise 7 - Write a function `sum_digits(n)` that returns the sum of the digits of a number recursively.
 

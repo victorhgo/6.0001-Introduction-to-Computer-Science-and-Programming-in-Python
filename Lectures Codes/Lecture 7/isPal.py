@@ -22,7 +22,7 @@ def silly(n):
         result = []
         elem = input("Enter element: ")
         result.append(elem)
-    if isPaul(result):
+    if isPal(result):
         print('Yes')
     else:
         print('No')

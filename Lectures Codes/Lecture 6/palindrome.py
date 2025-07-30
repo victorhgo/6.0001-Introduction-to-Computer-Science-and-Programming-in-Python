@@ -1,3 +1,7 @@
+"""
+Exercise 6 - Write a recursive function `is_palindrome(s)` that checks if a string `s` is a palindrome.
+"""
+
 def isPalindrome(string):
     """
     Receives an string, converts everything to chars and lower case using
@@ -9,6 +13,7 @@ def isPalindrome(string):
     def toChars(string):
         string = string.lower()
         ans = ''
+
         for ch in string:
             if ch in 'abcdefghijklmnopqrstuvwxyz':
                 ans = ans + ch
@@ -25,5 +30,8 @@ def isPalindrome(string):
 napoleon = "Able was I, ere I saw Elba"
 print("Is,'", napoleon, "' a palindrome?", isPalindrome(napoleon))
 
-string = "Ate Cubanos"
+string = "Go to a gig"
 print("Is,'", string, "' a palindrome?", isPalindrome(string))
+
+morocco = "Socorram me subi no onibus em Marrocos"
+print("Is,'", morocco, "' a palindrome?", isPalindrome(morocco))
