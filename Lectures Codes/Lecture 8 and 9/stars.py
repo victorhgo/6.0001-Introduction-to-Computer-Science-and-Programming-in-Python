@@ -307,4 +307,4 @@ print("\n---\n")
 print(stars["Betelgeuse"])
 
 # Plot the size vs Luminosity
-plotSizeLuminosity(stars)
+# plotSizeLuminosity(stars)

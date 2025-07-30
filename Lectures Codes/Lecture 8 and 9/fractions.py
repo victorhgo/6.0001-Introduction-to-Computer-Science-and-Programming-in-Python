@@ -4,10 +4,10 @@
 
 class Fraction(object):
     """
-    A number represented as a fraction num / denom
+    A number represented as a fraction num / denom, for denom ≠ 0
     """
     def __init__(self, num, denom):
-        """ num and denom are integers """
+        """ num and denom are integers """ 
         assert type(num) == int and type(denom) == int, "ints not used"
         self.num = num
         self.denom = denom

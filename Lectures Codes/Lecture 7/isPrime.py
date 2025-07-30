@@ -1,15 +1,32 @@
 def isPrime(x):
     """
-    Assumes x is a non-negative integer
+    Assumes x is a natural number > 1
     Returns True if x is prime, False otherwise
     """
-    # if x <= 2:
-    #     return False
-    for i in range(2, x):
-        if x % i == 0:
+    try:
+        if x > 1:
+            for i in range(2, x):
+                if x % i == 0:
+                    return False
+                
+            return True
+        else:
             return False
-    return True
+    # If x is anything but an integer
+    except:
+        return None
 
-print(isPrime(1093))
+def test():
+    """
+    Let's choose some arbitrary values for x and test whether they're prime or not, or if we find an issue with our program
+    """
+    # test for the first 100 integers:
+    for x in range(1, 10):
+        print("Is", x, "prime?", isPrime(x))
+    # Negative, floats and characters
+    for x in [6.7 , -83, 'a', None, 0]:
+        print("Is", x, "prime?", isPrime(x))
 
-# This code is wrong
+test()
+
+# Let's save a list of the first primes (from 0 to 100):

@@ -6,14 +6,24 @@ def Factorial(n):
     Assumes n is an integer
     Returns the factorial of n in form of n!
     """
-    if n == 0 or n == 1: # Base cases
-        return 1
-    else:
-        return n * Factorial(n - 1)
+    try:
+        if n == 0 or n == 1: # Base cases
+            return 1
+        else:
+            return n * Factorial(n - 1)
+    except:
+        raise TypeError("Factorial got bad arg")
     
-print("5! = ", Factorial(5))
-print("4! = ", Factorial(4))
-print("3! = ", Factorial(3))
-print("2! = ", Factorial(2))
-print("1! = ", Factorial(1))
-print("0! = ", Factorial(0))
+def testFactorial():
+    """
+    Let's get some arbitrary values for factorial including integers, floats and mixed types
+    """
+    # Integers greater than 1 and less than 10
+    for n in range(1, 10):
+        print(n, "! =", Factorial(n))
+    
+    # Some negative values:
+    for n in [-2, -10, -6]:
+        print(n, "! =", Factorial(n))
+
+testFactorial()

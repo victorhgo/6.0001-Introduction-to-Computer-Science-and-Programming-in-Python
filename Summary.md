@@ -10,8 +10,8 @@
 - [X] Lecture 7 - Testing, Debugging, Exceptions, Assertions (Need to finish the Lecture Note)
 - [X] Lecture 8 - Object Oriented Programming 
 - [X] Lecture 9 - Python Classes and Inheritance 
-- [ ] Lecture 10 - Understanding Program Efficiency, Part 1 
-- [ ] Lecture 11 - Understanding Program Efficiency, Part 2 
+- [X] Lecture 10 - Understanding Program Efficiency, Part 1 
+- [X] Lecture 11 - Understanding Program Efficiency, Part 2 
 - [ ] Lecture 12 - Searching and Sorting
 
 ## Problem Sets
@@ -19,12 +19,12 @@
 - [X] Pset 1 - Completed on 15 July 2025
 - [X] Pset 2 - Completed on 21 July 2025
 - [X] Pset 3 - Skipped on 23 July 2025
-- [ ] Pset 4 - Started on 24 July 2025
+- [ ] Pset 4 - Started on 30 July 2025
 - [ ] Pset 5
 
 ## Readings and Assignments Order
 
-Textbook used in the lectures: _Introduction to Computation and Programming Using Python: With Application to Understand Data Second Edition_
+Textbook used in the lectures: [_Eric Lehman, Tom Leighton, and Albert Meyer, Mathematics for Computer Science.(PDF)_](https://courses.csail.mit.edu/6.042/spring18/mcs.pdf)
 
 | Lect | Topics | Readings | Assignments |
 | --- | --- | --- | --- |

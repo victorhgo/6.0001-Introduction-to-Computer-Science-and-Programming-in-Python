@@ -4,7 +4,7 @@ Exercise 3 - Write a function `sum_natural(n)` that returns the sum of the first
 
 def sumNatural(n):
     """
-    Assumes n is an positive integer
+    Assumes n is a positive integer
     Return the sum of each nth natural numbers
     """
     if n == 1:

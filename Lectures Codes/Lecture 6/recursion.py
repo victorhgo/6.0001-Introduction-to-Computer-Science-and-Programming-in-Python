@@ -7,17 +7,16 @@ def multiplication(x,y):
         return x
     else:
         return x + multiplication(x, y-1)
-
-def factorial(x):
-    """
-    Receives a positive integer x
-    Returns its factorial x! (integer)
-    """
-    if x == 1 or x == 0: # Base case
-        return 1
-    else:
-        return x * factorial(x - 1)
     
-print("2 * 5:", multiplication(2,5))
-print("15! =", factorial(15))
-print("0! =", factorial(0))
+def test():
+    """
+    Select some arbitrary values for x and y to test multiplication
+    """
+    for x in range(1, 100):
+        for y in range(1, 100):
+            if multiplication(x,y):
+                print("Pass")
+            else:
+                print("Error")
+
+test()
