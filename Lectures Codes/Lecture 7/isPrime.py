@@ -21,12 +21,11 @@ def test():
     Let's choose some arbitrary values for x and test whether they're prime or not, or if we find an issue with our program
     """
     # test for the first 100 integers:
-    for x in range(1, 10):
+    for x in range():
         print("Is", x, "prime?", isPrime(x))
     # Negative, floats and characters
     for x in [6.7 , -83, 'a', None, 0]:
         print("Is", x, "prime?", isPrime(x))
 
-test()
-
+print(isPrime(7953))
 # Let's save a list of the first primes (from 0 to 100):

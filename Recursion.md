@@ -36,7 +36,7 @@
 
 - [ ] Exercise 17 - Implement binary search recursively for a sorted list.
 
-- [ ] Exercise 18 -  Write a recursive function to print all permutations of a string. (Part of Pset4)
+- [X] Exercise 18 -  Write a recursive function to print all permutations of a string. (Part of Pset4)
 
 - [ ] Exercise 19 - Write a recursive function that returns all subsets of a list.
 

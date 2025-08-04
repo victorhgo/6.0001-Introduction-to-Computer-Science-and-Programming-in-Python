@@ -6,8 +6,7 @@ Algorithmic complexity, a rough measure of the efficiency of a program (measurin
 
 We started asking the question: How efficient is my algorithm and how can we reason about an algorithm in order to predict the amount of time it will need to solve a problem of a particular size?
 
-
-- How can we relate choices in algorithm design to the time efficiency of the resulting algorithm? Are there fundtimental limits on the amount of time we will need to solve a particular problem?
+- How can we relate choices in algorithm design to the time efficiency of the resulting algorithm? Are there fundamental limits on the amount of time we will need to solve a particular problem?
 
 An algorithm can be implemented in many different ways, but we want to measure the algorithm itself, not the implementation.
 
@@ -222,3 +221,11 @@ def g(n):
 ```
 
 Computes $n^2$ very inefficiently. When dealing with nested loop, look at the ranges. In this case each nested loops is iterating n times, so O($n^2$)
+
+### Logarithmic Complexity
+
+
+### Polynomial Complexity
+
+
+### Exponential Complexity

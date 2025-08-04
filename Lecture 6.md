@@ -4,11 +4,13 @@ In today's class we will study Recursion (or divide/decrease and conquer) and di
 
 ## Recursion
 
-Recursion is the process of repeating items in a self-similar way. Algorithmically, recursion is a way to design solutions to problems by **divide and conquer** or **decrease and conquer**. In this method, we reduce a problem to simpler version of the same problem. 
+Recursion is the process of repeating items in a self-similar way. 
 
-Semantically, it is a programming technique where a **function calls itself** and the goal is to **NOT** have infinite recursion, otherwise the program will enter a infinite loop that can crash the entire system. 
+Algorithmically: a way to design solutions to problems by **divide and conquer** or **decrease and conquer**. In this method, we reduce a problem to simpler version of the same problem. 
 
-Recursion must have one or more *base cases* that are easy to solve, and then it must solve the same problem on **some other input** with the goal of simplifying the larger problem input.
+Semantically: a programming technique where a **function calls itself** and the goal is to **NOT** have infinite recursion, otherwise the program will enter a infinite loop that can crash the entire system. 
+
+It must have one or more *base cases* that are easy to solve, and then it must solve the same problem on **some other input** with the goal of simplifying the larger problem input.
 
 So far we've been using iterative algorithms like looping constructs (_for_ and _while_) that can capture computation in a set of _state variables_ that update on each iteration through loop. One example is the **Multiplication** operation that iterative can be described as:
 

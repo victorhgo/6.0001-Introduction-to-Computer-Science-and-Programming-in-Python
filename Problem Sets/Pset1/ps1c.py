@@ -51,3 +51,5 @@ while abs(current_savings - portion_down_payment) > epsilon:
                          
 print("Best saving rate:", answer)
 print("Steps in bisection search:", steps)
+
+# In this particular problem, I had some difficulties on implementing the bisection the right way

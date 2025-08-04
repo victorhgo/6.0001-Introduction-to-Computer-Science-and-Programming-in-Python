@@ -19,7 +19,7 @@
 - [X] Pset 1 - Completed on 15 July 2025
 - [X] Pset 2 - Completed on 21 July 2025
 - [X] Pset 3 - Skipped on 23 July 2025
-- [ ] Pset 4 - Started on 30 July 2025
+- [ ] Pset 4 - Started on 31 July 2025
 - [ ] Pset 5
 
 ## Readings and Assignments Order
