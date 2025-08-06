@@ -55,8 +55,8 @@ By looking at the largest factors in the run time, we can know which section of 
 ```py
 def fact(n):
     """ Assumes n an int >= 0 """
-    answer = 1
-    while n > 1:
+    answer = 1          
+    while n > 1:    
         answer *= n
         n -= 1          # temp = n - 1    
                         # n = temp
@@ -65,23 +65,23 @@ def fact(n):
 
 Computes Factorial in the iterative way:
 
-- Number of steps: 1 + 5n + 1 = 5n + 2
+    Number of steps: 1 + 5n + 1 = 5n + 2
 
-- Worst case asymptotic complexity: O(n) (grows linearly)
-  Ignore additive constants
-  Ignore multiplicative constants
+    Worst case asymptotic complexity: O(n) (grows linearly)
+        Ignore additive constants
+        Ignore multiplicative constants
 
 **Simplification Examples:** Drop constants and multiplicative factors and focus on **dominant** terms:
 
-If the algorithm has for instance $n^2 + 2n + 2$ operations, we say it's O($n^2$) (It's order _n squared_)
+1. If the algorithm has for instance $n^2 + 2n + 2$ operations, we say it's O($n^2$) (It's order _n squared_)
 
-If the algorithm has $n^2 + 100000n + 3^{1000}$ operations, we say it's O($n^2$)
+2. If the algorithm has $n^2 + 100000n + 3^{1000}$ operations, we say it's O($n^2$)
 
-If the algorithm has $\log(n) + n + 4$ operations, we say it's O($n$) (Linear)
+3. If the algorithm has $\log(n) + n + 4$ operations, we say it's O($n$) (Linear)
 
-If the algorithm has $0.0001*n*\log(n) + 300n$ then it's O($n\log(n)$)
+4. If the algorithm has $0.0001*n*\log(n) + 300n$ then it's O($n\log(n)$)
 
-If the algorithm has $2n^{30} + 3^n$, the it's O($3^n$)
+5. If the algorithm has $2n^{30} + 3^n$, the it's O($3^n$)
 
 Types of orders of growth are: **Constant, Linear, Quadratic, Logarithmic, $n\log(n)$ and Exponential**
 
@@ -92,7 +92,7 @@ We need to combine complexity classes by analysing statements inside functions a
 **Law of Addition for O()**
 
 1. Used with **sequential statements:**
-O(f(n)) + O(g(n)) is equal to O(f(n) + g(n)). Example:
+    O(f(n)) + O(g(n)) is equal to O(f(n) + g(n)). Example:
 
 ```py
 for i in range(n): # O(n)
@@ -224,8 +224,6 @@ Computes $n^2$ very inefficiently. When dealing with nested loop, look at the ra
 
 ### Logarithmic Complexity
 
-
 ### Polynomial Complexity
-
 
 ### Exponential Complexity

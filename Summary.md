@@ -12,15 +12,15 @@
 - [X] Lecture 9 - Python Classes and Inheritance 
 - [X] Lecture 10 - Understanding Program Efficiency, Part 1 
 - [X] Lecture 11 - Understanding Program Efficiency, Part 2 
-- [ ] Lecture 12 - Searching and Sorting
+- [X] Lecture 12 - Searching and Sorting
 
 ## Problem Sets
 - [X] Pset 0 - Completed on 12 July 2025
 - [X] Pset 1 - Completed on 15 July 2025
 - [X] Pset 2 - Completed on 21 July 2025
 - [X] Pset 3 - Skipped on 23 July 2025
-- [ ] Pset 4 - Started on 31 July 2025
-- [ ] Pset 5
+- [X] Pset 4 - Completed on 06 August 2025
+- [ ] Pset 5 - Not started yet...
 
 ## Readings and Assignments Order
 
