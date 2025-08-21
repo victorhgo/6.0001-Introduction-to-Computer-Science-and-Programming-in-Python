@@ -259,16 +259,16 @@ def Average(grades):
     return sum(grades)/len(grades)
 ```
 
-Where to use asserts?
+Why using asserts?
 
-- Spot bugs as soon as they're introduced
-- Use as a supplement for testing
-- Raise exceptions if user supplies bad data input
-- Use them to:
-1. Check types of arguments and values
-2. Check the invariants of a data structure are met
-3. Check the constraints of return values
-4. Check for violations of constraints on a procedure
+    - Spot bugs as soon as they're introduced
+    - Use as a supplement for testing
+    - Raise exceptions if user supplies bad data input
+    - Use them to:
+        1. Check types of arguments and values
+        2. Check the invariants of a data structure are met
+        3. Check the constraints of return values
+        4. Check for violations of constraints on a procedure
 
 
 
