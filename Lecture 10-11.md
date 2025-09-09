@@ -18,9 +18,8 @@ Python offers a native timer using the time module:
 import time
 
 def CelsiusToFahrenheit(c):
-    """
-    Assumes c is temperature measured in Celsius degrees
-    Converts it to Fahrenheit """
+    """ Assumes c is a temperature value measured in Celsius degrees
+    Returns the same value converted to Fahrenheit"""
     return c * 9/5 + 32
 
 # Start clock
@@ -97,11 +96,11 @@ We need to combine complexity classes by analysing statements inside functions a
 ```py
 for i in range(n): # O(n)
     print('a')
-for j in range(n*n): # O(n * n)
-    print('b')
+    for j in range(n*n): # O(n * n)
+        print('b')
 ```
 
-In the first case ```for i in range(n)``` it's linear in size of n, then O($n$). For the second case ```for j in range(n*n)``` it's squared O($n^2$), so the addition will be: O($n$) + O($n^2$) = O($n+n^2$) = O($n^2$) because of the dominant term $n^2$
+In the first case ```for i in range(n)``` it's linear in size of n, then O($n$). For the second case ```for j in range(n*n)``` it's squared O($n^2$), so the addition will be: O($n$) + O($n^2$) = O($n+n^2$) = O($n^2$) because of the dominant term $n^2$. **Nested loops** are O($n^2$).
 
 **Law of Multiplication for O()**
 1. Used with **nested statements/nested loops**
@@ -222,8 +221,143 @@ def g(n):
 
 Computes $n^2$ very inefficiently. When dealing with nested loop, look at the ranges. In this case each nested loops is iterating n times, so O($n^2$)
 
-### Logarithmic Complexity
+### Constant Complexity
+
+The asymptotic complexity is independent of the size of the inputs. For instance: finding the length of a list, multiplying two numbers, assigning a value to a variable.
+
+### Logarithmic Complexity O($\log n$)
+
+In logarithm complexity we don't cre about the base of the log, but we want to analyze a function that grows as the log of at least one of the inputs. One example is Binary Search.
+
+An algorithm with log complexity:
+
+```py
+def intToStr(i):
+    """ Assumes I is nonnegative integer
+    Returns a decimal string representation of i"""
+    digits = '0123456789'
+
+    if i == 0:
+        return '0'
+
+    result = ''
+
+    while i > 0:
+        result = digits[i%10] + result
+        i = i // 10
+
+    return result
+```
+
+We can check that there are no function or method calls in this piece of code, we know that we only have to look at the loops to determine the complexity class. Since there's only one loop, we only need to characterize the **number of iterations**. So it's the number of times we can use integer division to divide i by 10 before getting a result of 0. So the result of ```intToStr``` is O($\log (i)$).
+
+Check the complexity of ```addDigits```:
+
+```py
+def addDigits(n):
+    """ Assumes n is a nonnegative integer
+    Returns the sum of the digits in n"""
+    stringRep = intToStr(n)
+
+    val = 0
+
+    for c in stringRep:
+        val += int(c)
+    
+    return val
+```
+
+When running ```addDigits```, we are calling ```intToStr``` which has a complexity of O($log(i)$). But for the loop we are calling inside ```addDigits``` will be executed O($n$) times, where $n$ is the size of ```stringRep```. This program will run in time proportional to O($\log(n)$) + O($\log(n)$), which makes it O($\log(n)$)
+
+### Log-Linear Complexity
+
+This one is more complicated than the complexity we've looked so far, so we will skip it for now.
 
 ### Polynomial Complexity
 
+It's similar as **quadratic complexity**, but let's consider the following function:
+
+```py
+def isSubset(L1, L2):
+    """ Assumes L1 and L2 are lists
+    Returns True if each element in L1 is also in L2 (L1 is a subset of L2), False otherwise"""
+
+    for element1 in L1:
+        matched = False
+
+        for element2 in L2:
+            if element1 == element2:
+                matched = True
+                break # Attention to the usage of break in Python
+        
+        if not matched:
+            return False
+        
+    return True
+```
+
+Note that we are doing a nested for, for L1 and also for L2. The inner loop is executed O(len(L2)) times, and the outer loop is executed O(len(L1)) times. Thus the complexity of this function is O(len(L1) * len(L2)).
+
+Now let's take a look on another function:
+
+```py
+def intersect(L1, L2):
+    """ Assumes L1 and L2 are lists
+    Returns the Intersection of the two lists """
+
+    # Build a list containing common elements
+    temp = []
+
+    for element1 in L1:
+
+        for element2 in L2:
+            if element1 == element2:
+                temp.append(element1)
+                break
+        
+    # Build the intersection: no duplicated items (if any)
+    intersection = []
+
+    for element in temp:
+        if element not in intersection:
+            intersection.append(element)
+
+    return intersection
+```
+
+Since the lengths of ```intersection``` and ```temp``` are bounded by the length of the smaller of L1 and L2, the complexity of intersect is O(len(L1) * len(L2))
+
 ### Exponential Complexity
+
+We'll check that later, but many important problems are inherently exponential. The knapsack is one of these problems were solving them completely can require time that is exponential in the size of the input (For instance, when we have 6 choices to put in the knapsack, the complexity can have O($2^n$)). Consider the following code:
+
+```py
+def powerSet(L):
+    """ Assumes L is a list
+    Return a list of lists that contains all possible combinations of elements of L (powerset of L)"""
+
+    powerSet = []
+    for i in range(0, 2**len(L)):
+        binStr = getBinaryRep(i, len(L))
+        subset = []
+
+        for j in range(len(L)):
+            if binStr[j] == '1':
+                subset.append(L[j])
+
+        powerSet.append(subset)
+    
+    return powerSet
+```
+
+Remember the property of a powerset that states:
+
+- If a set has $n$ elements, its power set will contain $2^n$ subsets.
+
+We're using ```getBinaryRep``` to represent any combination of elements by a string of n 0 and 1, where 1 represents the presence of an element and 0 its absence. This, generating all subsets of a set L of length n can be done in the following way:
+
+1. Generate all n-bit binary numbers. These are the numbers from 0 to $2^n$
+
+2. For each of these $2^n + 1$ binary numbers, generate a list by selecting elements of L that have an index corresponding to a 1 in binary. For instance, if L is [1, 2] and the binary representation is 01, then generate the list [2].
+
+If we try to generate the power set of a set containing 10 elements, it will produce a list of $2^{10} = 1024$ elements. But what if we want to run with a larger set, we can check the algorithm will take longer to run. Thus we reach a point where this algorithm becomes inefficient, because it is **inherently exponential**. This mean we should find algorithms that find approximations to these kind of problems, or some can find perfect solutions on some instances of the problem.
